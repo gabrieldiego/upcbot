@@ -1,0 +1,21 @@
+# Install the Telegram Python API by cloning:
+git clone https://github.com/python-telegram-bot/python-telegram-bot.git
+
+#If Python needs to be updated do
+
+sudo apt install build-essential checkinstall
+sudo apt install libreadline-gplv2-dev libncursesw5-dev libssl-dev libsqlite3-dev tk-dev libgdbm-dev libc6-dev libbz2-dev libffi-dev
+
+wget https://www.python.org/ftp/python/3.9.7/Python-3.9.7.tgz
+tar xzvf Python-3.9.7.tgz
+rm Python-3.9.7.tgz
+
+cd Python-3.9.7
+make
+export PATH=`pwd`:$PATH
+cd ..
+
+# Then install it by doing
+cd python-telegram-bot/
+python setup-raw.py install
+
